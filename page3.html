@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Cyberbullying</title>
+    <style>
+        #nav {
+            height: 60px;
+            color: #d34617;
+            display: flex;
+            width: 100%;
+            padding: 0px;
+            margin: 0px;
+            
+            justify-content: center;
+        }
+        #nav h1 {
+            padding-left: 10px;
+            vertical-align: top;
+        }
+        a {
+            color: #d34617;
+            text-decoration: none;
+            text-align: center;
+        }
+        body {
+            background-color: #e5e5e5;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: 700;
+        }
+        p {
+            display: block;
+            justify-content: center;
+            max-width: 40%;
+            text-align: center;
+            transform: translateX(80%);
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="nav">
+        <img src="costeas-geitonas-school-cgs-pallini-greece.jpg" height="60px">
+        <a href="home.html" id="home"><h1>Αρχική</h1></a><h1>|</h1>
+        <a href="page1.html" id="1"><h1>Τι είναι;</h1></a><h1>|</h1>
+        <a href="page2.html" id="2"><h1>Συμπτώματα</h1></a><h1>|</h1>
+        <a href="page3.html" id="3"><h1>Αντιμετώπιση</h1></a><h1>|</h1>
+    </div>
+    <div id="title">
+        <h1 style="text-align: center; font-size: 72px;">Αντιμετώπιση</h1>
+        <br>
+        <br>
+    </div>
+    <div><p>Εαν καταλάβουμε ότι κάποιος παθαίνει cyber bullying, τον ρωτάμε πότε άρχισε και από ποιον και προσπαθούμε να μάθουμε όσο μπορούμε για το θέμα αυτό. Αν βρούμε άσχημες αναρτήσεις για το παιδί, να τις αποθηκεύουμε με screenshot. Όταν βλέπουμε τέτοια σχόλια πατάμε το report. Τέλος προσπαθούμε να δημιουργήσουμε μια θετική εικόνα για το παιδί.</p></div>
+    <div id="mode"><img src="dark.png" width="40px" style="position: fixed; bottom: 10px;"></div>
+    
+    
+    <script>
+        var mode = "light"
+        $("#home").mouseenter(function() {
+        var j = $("#home").children()
+        j.css("color", "#0b99e5")
+        })
+        $("#home").mouseleave(function() {
+            var j = $("#home").children()
+            j.css("color", "#d34617")
+        })
+        $("#1").mouseenter(function() {
+            var j = $("#1").children()
+            j.css("color", "#0b99e5")
+        })
+        $("#1").mouseleave(function() {
+            var j = $("#1").children()
+            j.css("color", "#d34617")
+        })
+        $("#2").mouseenter(function() {
+            var j = $("#2").children()
+            j.css("color", "#0b99e5")
+        })
+        $("#2").mouseleave(function() {
+            var j = $("#2").children()
+            j.css("color", "#d34617")
+        })
+        $("#3").mouseenter(function() {
+            var j = $("#3").children()
+            j.css("color", "#0b99e5")
+        })
+        $("#3").mouseleave(function() {
+            var j = $("#3").children()
+            j.css("color", "#d34617")
+        })
+        
+        $("#mode").click(function() {
+            if(mode === "dark") {
+                $("h1").css("color", "#000000")
+                $("#nav h1").css("color", "#d34617")
+                $("p").css("color", "#000000")
+                $("#mode").css("content", "url(dark.png)")
+                $("#mode").css("width", "40px")
+                $("#mode").css("position", "fixed")
+                $("#mode").css("bottom", "10px")
+                $("body").css("background-color", "#e5e5e5")
+                mode = "light"
+            } else {
+                $("h1").css("color", "#ffffff")
+                $("#nav h1").css("color", "#d34617")
+                $("p").css("color", "#ffffff")
+                $("#mode").css("content", "url(light.png)") 
+                $("#mode").css("width", "40px")
+                $("#mode").css("position", "fixed")
+                $("#mode").css("bottom", "10px")
+                $("body").css("background-color", "#151515")
+                mode = "dark"
+            }
+        })
+    </script>
+</body>
+</html>
