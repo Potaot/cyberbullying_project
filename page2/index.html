@@ -108,7 +108,7 @@
         })
         
         $("#mode").click(function() {
-            if(mode === "dark") {
+            if(document.cookie === "dark") {
                 $("h1").css("color", "#000000")
                 $("#nav h1").css("color", "#d34617")
                 $("p").css("color", "#000000")
@@ -117,7 +117,7 @@
                 $("#mode").css("position", "fixed")
                 $("#mode").css("bottom", "10px")
                 $("body").css("background-color", "#e5e5e5")
-                mode = "light"
+                document.cookie = "mode=light"
             } else {
                 $("h1").css("color", "#ffffff")
                 $("#nav h1").css("color", "#d34617")
@@ -127,7 +127,7 @@
                 $("#mode").css("position", "fixed")
                 $("#mode").css("bottom", "10px")
                 $("body").css("background-color", "#151515")
-                mode = "dark"
+                document.cookie = "mode=dark"
             }
         })
     </script>
