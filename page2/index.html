@@ -73,7 +73,29 @@
     
     
     <script>
-        var mode = "light"
+        $("document").load(function() {
+            if(document.cookie === "mode=dark") {
+                $("h1").css("color", "#000000")
+                $("#nav h1").css("color", "#d34617")
+                $("p").css("color", "#000000")
+                $("#mode").css("content", "url(https://sergoum.github.io/cyberbullying_project/dark.png)")
+                $("#mode").css("width", "40px")
+                $("#mode").css("position", "fixed")
+                $("#mode").css("bottom", "10px")
+                $("body").css("background-color", "#e5e5e5")
+                document.cookie = "mode=light"
+            } else {
+                $("h1").css("color", "#ffffff")
+                $("#nav h1").css("color", "#d34617")
+                $("p").css("color", "#ffffff")
+                $("#mode").css("content", "url(https://sergoum.github.io/cyberbullying_project/light.png)") 
+                $("#mode").css("width", "40px")
+                $("#mode").css("position", "fixed")
+                $("#mode").css("bottom", "10px")
+                $("body").css("background-color", "#151515")
+                document.cookie = "mode=dark"
+            }
+        })
         $("#home").mouseenter(function() {
         var j = $("#home").children()
         j.css("color", "#0b99e5")
