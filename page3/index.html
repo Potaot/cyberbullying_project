@@ -57,6 +57,7 @@
     
     
     <script>
+        var mode = "light"
         $("#home").mouseenter(function() {
         var j = $("#home").children()
         j.css("color", "#0b99e5")
@@ -91,7 +92,7 @@
         })
         
         $("#mode").click(function() {
-            if(document.cookie === "mode=dark") {
+            if(mode === "dark") {
                 $("h1").css("color", "#000000")
                 $("#nav h1").css("color", "#d34617")
                 $("p").css("color", "#000000")
@@ -100,7 +101,7 @@
                 $("#mode").css("position", "fixed")
                 $("#mode").css("bottom", "10px")
                 $("body").css("background-color", "#e5e5e5")
-                document.cookie = "mode=light"
+                mode = "light"
             } else {
                 $("h1").css("color", "#ffffff")
                 $("#nav h1").css("color", "#d34617")
@@ -110,7 +111,7 @@
                 $("#mode").css("position", "fixed")
                 $("#mode").css("bottom", "10px")
                 $("body").css("background-color", "#151515")
-                document.cookie = "mode=dark"
+                mode = "dark"
             }
         })
     </script>
