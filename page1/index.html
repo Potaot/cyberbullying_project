@@ -91,6 +91,7 @@
         })
         
         $("#mode").click(function() {
+            console.log(document.cookie)
             if(document.cookie === "mode=dark") {
                 $("h1").css("color", "#000000")
                 $("#nav h1").css("color", "#d34617")
